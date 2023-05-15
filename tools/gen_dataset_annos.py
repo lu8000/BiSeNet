@@ -14,10 +14,10 @@ def gen_coco():
                 |- train2017
                 |- val2017
     '''
-    root_path = '/kaggle/input/coco-2017-dataset/coco2017'
+    root_path = '/kaggle/input/coco-2017-dataset/'
     save_path = './datasets/coco/'
     for mode in ('train', 'val'):
-        im_root = osp.join(root_path, f'/{mode}2017')
+        im_root = osp.join(root_path, f'coco2017/{mode}2017')
         lb_root = osp.join('/kaggle/working/BiSeNet/datasets/coco/', f'labels/{mode}2017')
 
         ims = os.listdir(im_root)
